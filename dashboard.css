@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BASE ================= */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  padding: 18px 25px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar-wrapper {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 70px);
+  background: #ffffff;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar {
+  height: 100%;
+  padding: 25px 15px;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar button img {
+  width: 22px;
+}
+
+.sidebar button:hover {
+  background: #eef2ff;
+  transform: translateX(4px);
+}
+
+/* ================= HERO ================= */
+.hero {
+  margin-left: 250px;
+  padding: 120px 40px 60px;
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+  min-height: calc(100vh - 70px);
+}
+
+.container {
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: #4b5563;
+  margin-bottom: 35px;
+  line-height: 1.7;
+}
+
+/* ================= BUTTONS ================= */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #4f46e5;
+  border: 2px solid #4f46e5;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  margin-left: 250px;
+  padding: 20px;
+  background: #ffffff;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6b7280;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .sidebar-wrapper {
+    width: 220px;
+  }
+
+  .hero,
+  footer {
+    margin-left: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero,
+  footer {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  header {
+    position: static;
+  }
+}

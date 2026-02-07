@@ -1,0 +1,151 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =====================
+   NAVIGATION
+===================== */
+#navigation-header {
+  background: #0f172a; /* bleu foncé pro */
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#navigation-header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#navigation-header a {
+  text-decoration: none;
+  color: #f8fafc;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+#navigation-header a:hover {
+  color: #38bdf8;
+}
+
+/* =====================
+   SECTION PROJETS
+===================== */
+#projects {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+/* =====================
+   CARD PROJET
+===================== */
+.projet {
+  list-style: none;
+}
+
+.projet li {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projet li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.projet h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.project-title {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+}
+
+.projet p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* =====================
+   COMPÉTENCES
+===================== */
+#skills-title {
+  font-size: 1.3rem;
+  margin: 30px 0 15px;
+  color: #0f172a;
+}
+
+#skills {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  background: #f1f5f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+#skills li:hover {
+  background: #e2e8f0;
+}
+
+#skills img {
+  width: 40px;
+  height: auto;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  #navigation-header ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #skills {
+    justify-content: center;
+  }
+
+  #projects h2 {
+    font-size: 1.8rem;
+  }
+}

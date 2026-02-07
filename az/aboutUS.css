@@ -1,0 +1,141 @@
+/* =======================
+   RESET GLOBAL
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =======================
+   BASE
+======================= */
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+#navigation-header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  padding: 18px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+#navigation-header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+
+#navigation-header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 15px;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#navigation-header a:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+/* =======================
+   ABOUT SECTION
+======================= */
+#about-me {
+  max-width: 900px;
+  margin: 70px auto 40px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+#about-me h2 {
+  font-size: 2rem;
+  color: #111827;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#about-me p {
+  font-size: 1rem;
+  color: #555;
+  text-align: justify;
+}
+
+/* =======================
+   SKILLS
+======================= */
+#skills-title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 50px 0 30px;
+  color: #111827;
+}
+
+#skills {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  background: #ffffff;
+  padding: 18px 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#skills li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+#skills p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+#skills img {
+  width: 40px;
+  height: auto;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  #navigation-header ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  #about-me {
+    margin: 40px 15px;
+    padding: 30px 20px;
+  }
+
+  #about-me h2 {
+    font-size: 1.6rem;
+  }
+
+  #skills-title {
+    font-size: 1.5rem;
+  }
+}
